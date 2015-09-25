@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                tools:context=".MyActivity">
+
+
+    <RelativeLayout
+            android:layout_above="@+id/llText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"/>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_above="@+id/llButtons"
+            android:orientation="vertical"
+            android:id="@+id/llText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            >
+
+        <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="Welcome!"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_xsmall"/>
+
+        <TextView
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:text="All our service just one touch away\nSign in as"
+                android:layout_gravity="center"
+                android:textSize="@dimen/text_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/margin_large"
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+                android:id="@+id/txtConsumer"
+                android:background="@color/green"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Consumer"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal"
+                android:layout_height="match_parent"/>
+
+
+        <TextView
+                android:id="@+id/txtPartner"
+                android:background="@color/blue"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="Partner"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

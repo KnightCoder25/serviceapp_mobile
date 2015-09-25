@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+
+    <ImageView
+            android:id="@+id/imgPointer"
+            android:layout_centerVertical="true"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/yellow_circle"
+            />
+
+    <TextView
+
+            android:layout_toRightOf="@+id/imgPointer"
+            android:layout_toLeftOf="@+id/txtTime"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="Ac cooling"
+            android:id="@+id/txtSubCat"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_xnormal"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/txtTime"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:text="Estimated time\n21 mins"
+            android:textSize="@dimen/text_xsmall"
+            android:gravity="right"
+            android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

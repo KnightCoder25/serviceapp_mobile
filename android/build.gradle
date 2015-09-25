@@ -1,0 +1,83 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.1'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.demo.mike"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("keys/debug.keystore")// specify keystore file/jks
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+        release{
+            storeFile file("keys/release.jks")// specify keystore file/jks
+            keyAlias 'mikealias'
+            keyPassword 'demomike'
+            storePassword 'demomike'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':core')
+
+
+
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:support-v4:22.2.0'
+
+    compile 'com.felipecsl.asymmetricgridview:library:2.0.1'
+    compile 'com.jakewharton.timber:timber:3.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:design:22.2.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+
+
+    compile 'cn.pedant.sweetalert:library:1.3'
+    compile 'com.orhanobut:dialogplus:1.10@aar'
+
+    compile 'com.google.android.gms:play-services:7.5.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:1.2.2'
+
+
+
+
+}
